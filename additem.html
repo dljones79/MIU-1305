@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<!--David Jones-->
+<!--VFW 1304-->
+<!--Project 4-->
+
+<!-- Start of HTML -->
+<html>
+	<!-- Head group with meta data -->
+	<head>
+		<meta charset = "utf-8"/>
+		<meta name = "description" content = "Build a list of your EverQuest 2 Characters!"/>
+		<meta name = "keywords" content = "EverQuest 2, EQ2, EverQuest Characters"/>
+		<meta name = "robots" content = "index, follow"/>
+		<meta name = "viewport" content = "user-scalable=no, width=device-width"/>
+		<title>EverQuest 2 Character Database</title>
+		<link rel="stylesheet" href="css/styles.css" /> 
+	</head>
+	<body>
+		<header>
+			<h1>Character List</h1>
+		</header>
+		<div>
+			<nav>
+				<!-- Buttons to clear data, display data, and add new data. -->
+				<input type="button" value="Clear Stored Data" id="clearData"/>
+				<input type="button" value="Display Characters" id="dispData"/>
+				<input type="button" value="New Character" id="newChar" onclick="window.location.href='additem.html'" style="display:none;" />
+			</nav>
+		</div>
+		<!-- Form data -->
+		<form action="#" method="post" id="characterDataForm">
+			<div>
+				<!-- Character fieldset -->
+				<fieldset>
+					<legend>Character</legend>
+					<span>* Fields are required</span>
+					<ul id="formErrors"></ul>
+					<ul>
+						<li><label for="cName">*Character Name:</label><input type="text" id="cName" /></li>
+						<li><label for="account">*Account:</label><input type="text" id="account"/></li>
+						<li>
+							<!-- Option group to select server -->
+							<label for="server">Server:</label>
+							<select id="server">
+								<optgroup label="PvE Servers">
+									<option value="Butcherblock">Butcherblock</option>
+									<option value="Crushbone">Crushbone</option>
+									<option value="Everfrost">Everfrost</option>
+									<option value="Guk">Guk</option>
+									<option value="Oasis">Oasis</option>
+									<option value="Permafrost">Permafrost</option>
+									<option value="Unrest">Unrest</option>
+									<option value="Freeport">Freeport</option>
+								</optgroup>
+								<optgroup label="PvP Servers">
+									<option value="Nagafen">Nagafen</option>
+								</optgroup>
+								<optgroup label="Roleplaying Servers">
+									<option value="Antonia Bayle">Antonia Bayle</option>
+									<option value="Lucan D'Lere">Lucan D'Lere</option>
+								</optgroup>
+								<optgroup label="International Servers">
+									<option value="Innovation">Innovation</option>
+									<option value="Valor">Valor</option>
+									<option value="Runnyeye">Runnyeye</option>
+									<option value="Splitpaw">Splitpaw</option>
+									<option value="Sebilis">Sebelis</option>
+									<option value="Storms">Storms</option>
+								</optgroup>
+								<optgroup label="Russian Servers">
+									<option value="Barren Sky">Barren Sky</option>
+									<option value="Harla Dar">Harla Dar</option>
+								</optgroup>
+								<optgroup label="Test Servers">
+									<option label="Test">Test</option>
+									<option label="Test Copy">Test Copy</option>
+								</optgroup>
+							</select>
+						</li>
+						<li><label for="guild">Guild:</label><input type="text" id="guild"/></li>
+						<li><label for="creation">Creation Date:</label><input type="date" id="creation"/></li>
+						<li id="selClass"><label for="class">*Class:</label><br /></li>
+					</ul>
+				</fieldset>
+			</div>
+			<div>
+				<!-- Character Data fieldset -->
+				<fieldset>
+					<legend>Character Data</legend>
+					<ul>
+						<!-- Radio buttons to choose character sex. -->
+						<li>Sex:
+							<ul>
+								<li><input type="radio" checked value="Male" id="male" name="sex" /><label for="male">Male</label></li>
+								<li><input type="radio" value="Female" id="female" name="sex" /><label for="female">Female</label></li>
+							</ul>
+						</li>
+						<!-- Range inputs for level and alternate advancement points. -->
+						<!-- Output used for visual feedback for range values. -->
+						<li><label for="level">Level: </label><input type="range" min="1" max="95" name="level" id="level" oninput="lvl.value = level.valueAsNumber"/>
+							<output for="level" name="lvl" id="lvl">0</output>/95</li>
+						<li><label for="aa">AA's: </label><input type="range" min="1" max="320" name="aa" id="aa" oninput="alternate.value = aa.valueAsNumber"/>
+							<output for="aa" name="alternate" id="alternate">0</output>/320</li>
+						<!-- Checkboxes to select milestones completed on character -->
+						<li>Milestone Quests Completed:
+							<ul>
+								<li><input type="checkbox" checked value="Yes" id="enervated"/><label for="enervated">Enervated</label></li>
+								<li><input type="checkbox" value="Yes" id="harrows" /><label for="harrows">Harrows Access</label></li>
+								<li><input type="checkbox" value="Yes" id="skyshrine" /><label for="skyshrine">Skyshrine Access</label></li>
+							</ul>
+						</li>
+						<!-- Text area to input character biography. -->
+						<li><label for="bio">Bio:</label><textarea id="bio"></textarea></li>
+					</ul>
+				</fieldset>
+			</div>
+			<div>
+				<!-- Button to submit character data -->
+				<input type="button" value="Add Character" id="addChar"/>
+				<input type="hidden" value="True" />
+			</div>
+		</form>
+		<script src="js/json.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+	</body>
+</html>
