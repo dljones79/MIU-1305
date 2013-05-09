@@ -1,9 +1,18 @@
 // David Jones
-// VFW 1304
-// Project 4
+// MIU 1305
+// Project 1
 
 //Don't initialize until the DOM is done loading.
 window.addEventListener("DOMContentLoaded", function(){
+	
+	// When ready...
+	window.addEventListener("load",function() {
+		// Set a timeout...
+		setTimeout(function(){
+			// Hide the address bar!
+			window.scrollTo(0, 1);
+			}, 0);
+	});
 
 	//Variable Defaults
 	var charClasses = ["--Choose A Class--", "Berserker", "Guardian", "Paladin", "Shadowknight", "Monk", "Bruiser", 
@@ -232,13 +241,13 @@ window.addEventListener("DOMContentLoaded", function(){
 		get('lvl').innerHTML = charObj.level[1]; // Sets output for level range to stored value.
 		get('aa').value = charObj.aa[1];
 		get('alternate').innerHTML = charObj.aa[1]; // Sets output for aa range to stored value.
-		if(charObj.enervated[i] == "Yes"){
+		if(charObj.enervated[1] == "Yes"){
 			get('enervated').setAttribute("checked", "checked");
 		}
-		if(charObj.harrows[i] == "Yes"){
+		if(charObj.harrows[1] == "Yes"){
 			get('harrows').setAttribute("checked", "checked");
 		}
-		if(charObj.skyshrine[i] == "Yes"){
+		if(charObj.skyshrine[1] == "Yes"){
 			get('skyshrine').setAttribute("checked", "checked");
 		}
 		get('bio').value = charObj.bio[1];

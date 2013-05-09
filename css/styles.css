@@ -2,7 +2,7 @@
 
 title: styles.css
 by: David Jones
-for: VFW 1304 - Project 4
+for: MIU 1305 - Project 1
 
 */
 
@@ -83,13 +83,6 @@ h2{
 	margin-left: 12px;
 }
 
-/* Anchor attributes */
-a{
-	text-align: left;
-	margin-left: 12px;
-	padding-bottom: 15px;
-}
-
 /* Paragraph attributes */
 p{
 	margin: 1em;
@@ -161,3 +154,34 @@ input[type=button]{
 	-webkit-border-radius: 10px; /* For Safari/Chrome */
 	border-radius: 10px; /* For when the standard gets fully supported */
 }
+
+/* Targeting featured div */
+#featured {
+	margin-left: 0px;
+	margin: 0px;
+	padding: 0px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#searchBox {
+	margin: 1px;
+	float: left;
+	margin-left: 46px;
+}
+
+#browseItems li {
+	background-color: transparent;
+	border: none;
+	margin: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	text-align: left;
+	color: none;
+	font-weight: none;
+	font-size:0px;
+}
+
