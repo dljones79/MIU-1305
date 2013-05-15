@@ -1,0 +1,186 @@
+/*
+
+title: styles.css
+by: David Jones
+for: MIU 1305 - Project 1
+
+*/
+
+/* Set attributes for body items */
+body {
+	background: url('../img/bg.png');
+	padding: 0px;
+	margin: 0px;
+	color: #4c566c;
+	text-shadow: 0px 1px -1px #fff;
+	font: normal 15px Arial;
+	overflow: scroll;
+}
+
+/* Set attributes for divs */
+div {
+	margin: 10px;
+	padding: 5px;
+}
+
+/* Set attributes for text inputs */
+input[type=text]{
+	display: block;
+	width: auto;
+}
+
+/* Set attributes for select items. */
+select{
+	display: block;
+	width: auto;
+}
+
+/* Set attributes for date inputs */
+input[type=date]{
+	display: block;
+	width: auto;
+}
+
+/* Set attributes for radio inputs */
+input[type=radio]{
+	margin-right: 20px;
+}
+
+/* Set attributes for checkboxes */
+input[type=checkbox]{
+	margin-right: 20px;
+}
+
+/* Set attributes for range inputs */
+input[type=range]{
+	display: block;
+	width: auto;
+}
+
+/* Set size for images. */
+img{
+	max-width:100%;
+	height:auto;
+}
+
+/* Heading 1 Attributes */
+h1 {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#b4bfce), color-stop( 50%, #889bb3), color-stop(50%, #7f94b0), to(#6d83a1));
+	margin: 0px;
+	height: 34px;
+	font-size: 22px;
+	text-shadow: 0px -1px 1px #000;
+	border-bottom: 1px solid black;
+	color: white;
+	padding: 8px 0px 0px 0px;
+	text-align: center;
+}
+
+/* Heading 2 Attributes */
+h2{
+	text-align: left;
+	font-size: 19px;
+	margin-left: 12px;
+}
+
+/* Paragraph attributes */
+p{
+	margin: 1em;
+}
+
+/* Unordered list attributes */
+ul{
+	list-style: none;
+	margin: 10px;
+	padding: 0px;
+}
+
+/* List item attributes */
+li{
+	background-color: white;
+	border: 1px solid #ababab;
+	margin-bottom: -2px;
+	padding: 12px 10px;
+	text-align: left;
+	color: black;
+	font-weight: bold;
+}
+
+/* Sets font color for error messages to red */
+#errorLi{
+	color: red;
+}
+
+/* Rounding the borders for the list items. */
+li:first-child{
+   -webkit-border-top-left-radius: 12px;
+   -webkit-border-top-right-radius: 12px;
+}
+
+li:last-child {
+   -webkit-border-bottom-left-radius: 12px;
+   -webkit-border-bottom-right-radius: 12px;
+}
+
+/* Button Attributes */
+input[type=button]{
+	-webkit-box-shadow: 0px -1px 1px #2f3740, 0px 1px 1px #bfcbdb;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#8aa1bf), color-stop( 50%, #5877a2), color-stop(50%, #476999), to(#4a6c9b));
+	-webkit-border-radius: 4px;
+	font: bold 12px Arial;
+	text-align: center;
+	line-height: 28px;
+	color: white;
+	text-shadow: rgba(0,0,0,0.5) 0px -1px 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-tap-highlight-color: white;
+	padding: 2px;
+	top: 4px;
+	left: 6px;
+	border: 1px solid #3e444c;
+	margin: 7px;
+	width: 125px;
+	display: inline;
+	
+}
+
+/* Class Image Attributes */
+#classImg {
+	-moz-box-shadow: 10px 10px 5px #888; /* For FireFox */
+	-webkit-box-shadow: 10px 10px 5px #888; /* For Safari/Chrome */
+	box-shadow: 10px 10px 5px #888; /* For when the standard gets fully supported */
+	-moz-border-radius: 10px; /* For FireFox */
+	-webkit-border-radius: 10px; /* For Safari/Chrome */
+	border-radius: 10px; /* For when the standard gets fully supported */
+}
+
+/* Targeting featured div */
+#featured {
+	margin-left: 0px;
+	margin: 0px;
+	padding: 0px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#searchBox {
+	margin: 1px;
+	float: left;
+	margin-left: 46px;
+}
+
+#browseItems li {
+	background-color: transparent;
+	border: none;
+	margin: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	text-align: left;
+	color: none;
+	font-weight: none;
+	font-size:0px;
+}
