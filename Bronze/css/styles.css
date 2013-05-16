@@ -1,0 +1,29 @@
+/*
+body {
+	background: url('../img/bg.png') !important;
+}
+*/
+
+body {background-color: black !important;}
+
+#featured {margin-bottom: 0px !important!; padding:0px !important;}
+
+#homeContent {margin-top: 0px !important; padding-top:0px !important;}
+
+#selClass {list-style: none !important;}
+
+#buttonHead {padding:5px; margin-top:0px;}
+
+#browseButtons {margin-top: 0px !important; padding-top: 0px !important;}
+
+#searchCharacters {padding: 0px !important;}
+
+#searchChar {padding: 0px !important; margin-top: 0px !important; margin-bottom: 0px !important;}
+
+#homeHead {font-size: 13px !important;}
+
+#divider {margin-top: 0px !important; margin-bottom: 0px !important;}
+
+#browseContainer {padding-top: 0px !important; padding-bottom: 0px !important; margin-top: 0px !important; margin-bottom: 10px !important;}
+
+#formContainer {padding-bottom: 0px !important; margin-bottom: 0px !important;}

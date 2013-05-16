@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<!--David Jones-->
+<!--MIU 1305-->
+<!--Project 1-->
+
+<html lang="en">
+	<head>
+		<meta charset = "utf-8"/>
+		
+		<title>EverQuest II Character Database</title>
+		
+		<meta name = "description" content = "Build a list of your EverQuest II Characters!"/>
+		<meta name = "keywords" content = "EverQuest II, EQ2, EverQuest Characters"/>
+		<meta name = "robots" content = "index, follow"/>
+		<meta name = "HandheldFriendly" content="True"/>
+		<meta name = "MobileOptimized" content="320"/>
+		<meta name = "viewport" content = "user-scalable=no, width=device-width"/>
+		<meta http-equiv="cleartype" content="on">
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<link rel="stylesheet" href="css/styles.css" />		
+		
+		<script src="js/libs/modernizr.custom.min.js"></script>
+		
+	</head><!-- /head -->
+	
+	<body>
+		<!-- Body content -->
+		<div data-role="page" id="home" style="background:transparent;">
+			<div data-role="header" data-position="fixed" data-id="header">
+				<h1 id="homeHead">Bronze Database</h1>
+			</div><!-- /header -->
+			<!--Featured Item Div-->
+			<div id="featured">
+				<a href='additem.html' data-ajax="false"><img src='img/Featured.png'></a>
+			</div><!-- /featured -->
+			
+			<div data-role="content" data-theme="a" id="homeContent">
+				<!-- Search Box Div -->
+				<div data-inset="true" id="formContainer">
+					<form action="" method="post" id="searchCharacters">
+						<div data-role="fieldcontain" data-id="searchContainer">
+							<input type="search" name="searchChar" id="searchChar" placeholder="Search Here."/>
+						</div><!-- /searchContainer -->
+					</form><!-- /searchCharacters -->
+				</div id="controlGroup">
+					<ul data-role="listview" id="browseContainer">
+						<li data-role="list-divider" id="divider">Browse By:</li>
+					</ul>
+					<div data-role="fieldcontain" id="browseButtons">
+						<div class="ui-grid-a">
+							<div class="ui-block-a"><a href="#browse" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right">Scouts</a></div>
+							<div class="ui-block-b"><a href="#browse" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right">Fighters</a></div>
+						</div>
+						<div class="ui-grid-a">
+							<div class="ui-block-a"><a href="#browse" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right">Priests</a></div>
+							<div class="ui-block-b"><a href="#browse" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right">Mages</a></div>
+						</div>
+						<div class="ui-grid-solo">
+							<a href="#browse" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right">Max Level</a>
+					</div><!-- /browse -->
+				</div><!-- /controlGroup -->				
+			</div><!-- /homeContent -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home" data-ajax="false" class="ui-btn-active ui-state-persist">Home</a></li>
+						<li><a href="#activity" data-icon="grid" data-ajax="false">Activity</a></li>
+						<li><a href="#info" data-icon="info" data-ajax="false">Info</a></li>
+						<li><a href="additem.html" data-icon="plus" data-ajax="false">Add Item</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+		</div><!-- /home -->
+		
+		<div data-role="page" id="activity" style="background:transparent;" data-add-back-btn="true">
+			<div data-role="header" data-position="fixed" data-id="header">
+				<h1 id="activityHead">Bronze Activity</h1>
+			</div><!-- /header -->
+			<div data-role="content" id="activityFeed">
+				<ul data-role="listview" data-inset="true" data-theme="a" data-filter="true">
+				    <li data-role="list-divider">Wednesday, June 15, 2013 <span class="ui-li-count">3</span></li>
+				    <li>
+				    	<img src="img/newsfeed/Swashbuckler.png">
+				        <h2>Attricane</h2>
+				        <p><strong>95 Swashbuckler 320 AA's</strong></p>
+				        <p>Added Character To Database</p>
+				        <p class="ui-li-aside"><strong>5:20</strong>PM</p>
+				    </li>
+				    <li>
+				    	<img src="img/newsfeed/Inquisitor.png">
+				        <h2>Agustine</h2>
+				        <p><strong>95 Inquisitor 320 AA's</strong></p>
+				        <p>Edited Character. (AA's)</p>
+				        <p class="ui-li-aside"><strong>10:48</strong>AM</p>
+				    </li>
+				    <li>
+				    	<img src="img/newsfeed/Guardian.png">
+				        <h2>Brigade</h2>
+				        <p><strong>95 Guardian 320 AA's</strong></p>
+				        <p>Edited Character. (Level)</p>
+				        <p class="ui-li-aside"><strong>10:32</strong>AM</p>
+				    </li>
+				    <li data-role="list-divider">Tuesday, June 14, 2013 <span class="ui-li-count">2</span></li>
+				    <li>
+				    	<img src="img/newsfeed/Wizard.png">
+				        <h2>Kataklysm</h2>
+				        <p><strong>95 Wizard 300 AA's</strong></p>
+				        <p>Added Character to Database</p>
+				        <p class="ui-li-aside"><strong>1:48</strong>PM</p>
+				    </li>
+				    <li>
+				    	<img src="img/newsfeed/Coercer.png">
+				        <h2>Nevah</h2>
+				        <p><strong>95 Coercer 320 AA's</strong></p>
+				        <p>Added Character to Database</p>
+				        <p class="ui-li-aside"><strong>1:40</strong>PM</p>
+				    </li>
+				</ul>
+			</div><!-- /activityFeed -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home" data-ajax="false">Home</a></li>
+						<li><a href="#activity" data-icon="grid" data-ajax="false" class="ui-btn-active ui-state-persist">Activity</a></li>
+						<li><a href="#info" data-icon="info" data-ajax="false">Info</a></li>
+						<li><a href="additem.html" data-icon="plus" data-ajax="false">Add Item</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+		</div><!-- /activity -->
+		
+		<!-- Browse page under construction. Full functionality to come later. -->
+		<!-- Intend to use JS to expand each section according to which browse button was pushed. -->
+		<div data-role="page" id="browse" style="background:transparent;" data-add-back-btn="true">
+			<div data-role="header" data-position="fixed" data-id="header">
+				<h1>Bronze Browse</h1>
+			</div><!-- /header -->
+			<div data-role="content" id="browseResults">
+				<div data-role="collapsible" data-collapsed="false" data-theme="b" data-content-theme="a">
+					<h4>Scouts</h4>
+					<ul data-role="listview" data-filter="true">
+						<li>Character 1</li>
+						<li>Character 2</li>
+						<li>Character 3</li>
+						<li>Character....</>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="a">
+					<h4>Fighers</h4>
+					<ul data-role="listview" data-filter="true">
+						<li>Character 1</li>
+						<li>Character 2</li>
+						<li>Character 3</li>
+						<li>Character....</>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="a">
+					<h4>Priests</h4>
+					<ul data-role="listview" data-filter="true">
+						<li>Character 1</li>
+						<li>Character 2</li>
+						<li>Character 3</li>
+						<li>Character....</>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="a">
+					<h4>Mages</h4>
+					<ul data-role="listview" data-filter="true">
+						<li>Character 1</li>
+						<li>Character 2</li>
+						<li>Character 3</li>
+						<li>Character....</>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="a">
+					<h4>Max Level</h4>
+					<ul data-role="listview" data-filter="true">
+						<li>Character 1</li>
+						<li>Character 2</li>
+						<li>Character 3</li>
+						<li>Character....</>
+					</ul>
+				</div>
+			</div><!-- /browseResults -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home" data-ajax="false">Home</a></li>
+						<li><a href="#activity" data-icon="grid" data-ajax="false">Activity</a></li>
+						<li><a href="#info" data-icon="info" data-ajax="false">Info</a></li>
+						<li><a href="additem.html" data-icon="plus" data-ajax="false">Add Item</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+		</div><!-- /browse -->
+		
+		<!-- Info Page -->
+		<div data-role="page" id="info" style="background:transparent;" data-add-back-btn="true">
+			<div data-role="header" data-position="fixed" data-id="header">
+				<h1>Bronze Info</h1>
+			</div><!-- /header -->
+			<div data-role="content" id="infoContent" data-theme="a">
+				<ul data-role="listview">
+					<li data-role="list-divider">Links:</li>
+					<li><a href="#author">Author Info</a></li>
+					<li><a href="#">Git Hub Pages Branch</a></li>
+					<li><a href="https://github.com/g05677/MIU-1305">Git Hub Repository</a></li>
+					<li><a href="../Gold/index.html" data-ajax="false">Bronze Application</a></li>
+				</ul>
+			</div>
+			<div id="featuredInfoPage">
+				<a href='additem.html' data-ajax="false"><img src='img/Featured.png'></a>
+			</div><!-- /featured -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home" data-ajax="false">Home</a></li>
+						<li><a href="#activity" data-icon="grid" data-ajax="false">Activity</a></li>
+						<li><a href="#info" data-icon="info" data-ajax="false" class="ui-btn-active ui-state-persist">Info</a></li>
+						<li><a href="additem.html" data-icon="plus" data-ajax="false">Add Item</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+		</div><!-- /info -->
+		
+		<!-- Author Page -->
+		<div data-role="page" id="author" style="background:transparent;" data-add-back-btn="true">
+			<div data-role="header" data-position="fixed" data-id="header" data-add-back-btn="true">
+				<h1>Bronze Author</h1>
+			</div><!-- /header -->
+			<div data-role="content" id="authorData">
+				<ul data-role="listview" data-inset="true" data-theme="a">
+				    <li data-role="list-divider">About the Author:</li>
+				    <li>
+				    	<img src="img/author.png">
+				        <h2>David L. Jones</h2>
+				        <p><strong>Student|Full Sail University</strong></p>
+				        <p><strong>Mobile Development BS</strong></p>
+				        <p>dljones79@fullsail.edu</p>
+				        <p>Loves to code!</p>
+				    </li>
+				</ul>
+			</div><!-- /authorData -->
+
+			<div id="featuredAuthorPage">
+				<a href='additem.html' data-ajax="false"><img src='img/Featured.png'></a>
+			</div><!-- /featured -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home" data-ajax="false">Home</a></li>
+						<li><a href="#activity" data-icon="grid" data-ajax="false">Activity</a></li>
+						<li><a href="#info" data-icon="info" data-ajax="false" class="ui-btn-active ui-state-persist">Info</a></li>
+						<li><a href="additem.html" data-icon="plus" data-ajax="false">Add Item</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+		</div><!-- /author -->		
+		
+<!-- Beginning work on #additem page
+		
+		<div data-role="page" id="addItem">
+			<div data-role="header" data-position="fixed">
+				<a href="#home" data-icon="back" data-theme="b">Back</a>
+				<h1>Add Item</h1>
+			</div>
+			<div data-role="content" data-theme="a">
+				<div data-role="fieldcontain" id="buttonHead">
+					<div data-role="controlgroup" data-type="horizontal" data-mini="true">
+						<a href="#" data-role="button" data-ajax="false" id="clearData">Clear Data</a>
+						<a href="#" data-role="button" data-ajax="false" id="dispData">Display Data</a>
+						<a href="#" data-role="button" data-ajax="false" id="newChar" onclick="window.location.reload()" style="display:none;">New Character</a>
+					</div>
+				</div>
+				<form action="#" method="post" id="characterDataForm">
+					<fieldset data-mini="true">
+						<span>* Fields are required. *</span>
+						<ul id="formErrors"></ul>
+						<div data-role="fieldcontain">
+							<label for="cName">*Character Name:</label>
+							<input type="text" id="cName" />
+						</div>
+						<div data-role="fieldcontain">
+							<label for="account">*Account:</label>
+							<input type="text" id="account" />
+						</div>
+						<div data-role="fieldcontain">
+							<label for="server">Server:</label>
+							<select name="server" id="server" data-native-menu="false">
+								<optgroup label="PvE Servers">
+									<option value="default">-- Select a Server --</option>
+									<option value="Butcherblock">Butcherblock</option>
+									<option value="Crushbone">Crushbone</option>
+									<option value="Everfrost">Everfrost</option>
+									<option value="Guk">Guk</option>
+									<option value="Oasis">Oasis</option>
+									<option value="Permafrost">Permafrost</option>
+									<option value="Unrest">Unrest</option>
+									<option value="Freeport">Freeport</option>
+								</optgroup>
+								<optgroup label="PvP Servers">
+									<option value="Nagafen">Nagafen</option>
+								</optgroup>
+								<optgroup label="Roleplaying Servers">
+									<option value="Antonia Bayle">Antonia Bayle</option>
+									<option value="Lucan D'Lere">Lucan D'Lere</option>
+								</optgroup>
+								<optgroup label="International Servers">
+									<option value="Innovation">Innovation</option>
+									<option value="Valor">Valor</option>
+									<option value="Runnyeye">Runnyeye</option>
+									<option value="Splitpaw">Splitpaw</option>
+									<option value="Sebilis">Sebelis</option>
+									<option value="Storms">Storms</option>
+								</optgroup>
+								<optgroup label="Russian Servers">
+									<option value="Barren Sky">Barren Sky</option>
+									<option value="Harla Dar">Harla Dar</option>
+								</optgroup>
+								<optgroup label="Test Servers">
+									<option label="Test">Test</option>
+									<option label="Test Copy">Test Copy</option>
+								</optgroup>
+							</select>
+						</div>
+						<div data-role="fieldcontain">
+							<label for="guild">Guild:</label>
+							<input type="text" id="guild" />
+						</div>
+						<div data-role="fieldcontain">
+							<label for="creation">Creation Date:</label>
+							<input type="date" id="creation" />
+						</div>
+						<div data-role="fieldcontain">
+							<li id="selClass"><label for="class">*Class:     </label></li>
+						</div>
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup">
+								<legend>Gender:</legend>
+								<input type="radio" checked value="Male" name="sex" id="male" />
+								<label for="male">Male</label>
+								<input type="radio" value="Female" name="sex" id="female" />
+								<label for="female">Female</label>
+							</fieldset>
+						</div>
+						<div data-role="fieldcontain">
+							<label for="level">Level:</label>
+							<input type="range" min="1" max="95" name="level" id="level" oninput="lvl.value = level.valueAsNumber" data-highlight="true" data-mini="true" />
+							<label for="aa">AA's:</label>
+							<input type="range" min="0" max="320" name="aa" id="aa" oninput="alternate.value = aa.valueAsNumber" data-highlight="true" data-mini="true" />
+						</div>
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup">
+								<legend>Milestones Complete:</legend>
+								<input type="checkbox" value="Yes" id="enervated" checked name="enervated">
+								<label for="enervated">Enervated:</label>
+								<input type="checkbox" value="Yes" id="harrows" name="harrows">
+								<label for="harrows">Harrows:</label>
+								<input type="checkbox" value="Yes" id="skyshrine" name="skyshrine">
+								<label for="skyshrine">Skyshrine:</label>
+							</fieldset>
+						</div>
+						<div data-role="fieldcontain">
+							<label for"bio">Bio:</label>
+							<textarea id="bio"></textarea>
+						</div>
+					</fieldset>
+					<div>
+						<input type="button" value="Add Character" id="addChar"/>
+					</div>
+				</form>
+			</div>
+		</div>	
+-->	<!-- /addItem -->
+	
+		<!-- Linking to our JS files
+		<script src="js/json.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>  -->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	</body><!-- /body -->
+</html><!-- /html -->

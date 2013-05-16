@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	});
 
 	//Variable Defaults
-	var charClasses = ["--Choose A Class--", "Berserker", "Guardian", "Paladin", "Shadowknight", "Monk", "Bruiser", 
+	var charClasses = ["-- Choose A Class --", "Berserker", "Guardian", "Paladin", "Shadowknight", "Monk", "Bruiser", 
 		"Ranger", "Assassin", "Swashbuckler", "Beastlord", "Brigand", "Troubadour", "Dirge", "Mystic", "Defiler", "Templar",
 		"Inquisitor", "Fury", "Warden", "Wizard", "Warlock", "Necromancer", "Conjuror", "Coercer", "Illusionist"],
 		sexData,
@@ -37,6 +37,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			selLi = get('selClass'),
 			makeSel = document.createElement('select');
 			makeSel.setAttribute("id", "classes");
+			makeSel.setAttribute("data-native-menu", "false");
 		for(var i=0, j=charClasses.length; i<j; i++){
 			var createOp = document.createElement('option');
 			var optionTxt = charClasses[i];
@@ -238,9 +239,9 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 		get('level').value = charObj.level[1];
-		get('lvl').innerHTML = charObj.level[1]; // Sets output for level range to stored value.
+		get('lvl').innerHTML = charObj.level[1]; //Sets output for level range.
 		get('aa').value = charObj.aa[1];
-		get('alternate').innerHTML = charObj.aa[1]; // Sets output for aa range to stored value.
+		get('alternate').innerHTML = charObj.aa[1]; //Sets output for aa range.
 		if(charObj.enervated[1] == "Yes"){
 			get('enervated').setAttribute("checked", "checked");
 		}
