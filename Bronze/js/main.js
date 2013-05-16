@@ -350,7 +350,6 @@ window.addEventListener("DOMContentLoaded", function(){
 	var addChar = get('addChar');
 	addChar.addEventListener("click", validateFields);
 	
-
 });
 
 
