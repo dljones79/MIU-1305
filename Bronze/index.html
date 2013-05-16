@@ -44,22 +44,26 @@
 							<input type="search" name="searchChar" id="searchChar" placeholder="Search Here."/>
 						</div><!-- /searchContainer -->
 					</form><!-- /searchCharacters -->
-				</div id="controlGroup">
+				</div>
+				<div id="controlGroup">
 					<ul data-role="listview" id="browseContainer">
 						<li data-role="list-divider" id="divider">Browse By:</li>
-					</ul>
-					<div data-role="fieldcontain" id="browseButtons">
-						<div class="ui-grid-a">
-							<div class="ui-block-a"><a href="#browse" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right">Scouts</a></div>
-							<div class="ui-block-b"><a href="#browse" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right">Fighters</a></div>
-						</div>
-						<div class="ui-grid-a">
-							<div class="ui-block-a"><a href="#browse" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right">Priests</a></div>
-							<div class="ui-block-b"><a href="#browse" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right">Mages</a></div>
-						</div>
-						<div class="ui-grid-solo">
-							<a href="#browse" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right">Max Level</a>
-					</div><!-- /browse -->
+						<li><a href="#browse" data-icon="arrow-r" data-iconpos="right" id="scoutLink">
+							<h3>Scouts</h3>
+						</a></li>
+						<li><a href="#browse" data-icon="arrow-r" data-iconpos="right" id="fighterLink">
+							<h3>Fighters</h3>
+						</a></li>
+						<li><a href="#browse" data-icon="arrow-r" data-iconpos="right" id="priestLink">
+							<h3>Priests</h3>
+						</a></li>
+						<li><a href="#browse" data-icon="arrow-r" data-iconpos="right" id="mageLink">
+							<h3>Mages</h3>
+						</a></li>
+						<li><a href="#browse" data-icon="arrow-r" data-iconpos="right" id="maxLink">
+							<h3>Max Level</h3>
+						</a></li>
+					</ul><!-- /browseContainer -->
 				</div><!-- /controlGroup -->				
 			</div><!-- /homeContent -->
 			<div data-role="footer" data-position="fixed" data-id="home">
