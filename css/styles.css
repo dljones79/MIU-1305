@@ -185,3 +185,7 @@ input[type=button]{
 	font-size:0px;
 }
 
+#browse {
+	display: block;
+}
+
