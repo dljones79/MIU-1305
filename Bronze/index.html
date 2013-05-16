@@ -29,7 +29,7 @@
 		<!-- Body content -->
 		<div data-role="page" id="home" style="background:transparent;">
 			<div data-role="header" data-position="fixed" data-id="header">
-				<h1 id="homeHead">Bronze</h1>
+				<h1 id="homeHead">Bronze Database</h1>
 			</div><!-- /header -->
 			<!--Featured Item Div-->
 			<div id="featured">
@@ -76,10 +76,10 @@
 		
 		<div data-role="page" id="activity" style="background:transparent;" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" data-id="header">
-				<h1 id="activityHead">Activity-B</h1>
+				<h1 id="activityHead">Bronze Activity</h1>
 			</div><!-- /header -->
 			<div data-role="content" id="activityFeed">
-				<ul data-role="listview" data-inset="true" data-theme="a">
+				<ul data-role="listview" data-inset="true" data-theme="a" data-filter="true">
 				    <li data-role="list-divider">Wednesday, June 15, 2013 <span class="ui-li-count">3</span></li>
 				    <li>
 				    	<img src="img/newsfeed/Swashbuckler.png">
@@ -132,14 +132,51 @@
 		</div><!-- /activity -->
 		
 		<!-- Browse page under construction. Full functionality to come later. -->
+		<!-- Intend to use JS to expand each section according to which browse button was pushed. -->
 		<div data-role="page" id="browse" style="background:transparent;" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" data-id="header">
-				<h1>Browse-B</h1>
+				<h1>Bronze Browse</h1>
 			</div><!-- /header -->
 			<div data-role="content" id="browseResults">
 				<div data-role="collapsible" data-collapsed="false" data-theme="b" data-content-theme="a">
-					<h4>Browse Results</h4>
-					<ul data-role="listview">
+					<h4>Scouts</h4>
+					<ul data-role="listview" data-filter="true">
+						<li>Character 1</li>
+						<li>Character 2</li>
+						<li>Character 3</li>
+						<li>Character....</>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="a">
+					<h4>Fighers</h4>
+					<ul data-role="listview" data-filter="true">
+						<li>Character 1</li>
+						<li>Character 2</li>
+						<li>Character 3</li>
+						<li>Character....</>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="a">
+					<h4>Priests</h4>
+					<ul data-role="listview" data-filter="true">
+						<li>Character 1</li>
+						<li>Character 2</li>
+						<li>Character 3</li>
+						<li>Character....</>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="a">
+					<h4>Mages</h4>
+					<ul data-role="listview" data-filter="true">
+						<li>Character 1</li>
+						<li>Character 2</li>
+						<li>Character 3</li>
+						<li>Character....</>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="a">
+					<h4>Max Level</h4>
+					<ul data-role="listview" data-filter="true">
 						<li>Character 1</li>
 						<li>Character 2</li>
 						<li>Character 3</li>
@@ -159,11 +196,23 @@
 			</div><!-- /footer -->
 		</div><!-- /browse -->
 		
-		<!-- About Page -->
+		<!-- Info Page -->
 		<div data-role="page" id="info" style="background:transparent;" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" data-id="header">
-				<h1>Info-B</h1>
+				<h1>Bronze Info</h1>
 			</div><!-- /header -->
+			<div data-role="content" id="infoContent" data-theme="a">
+				<ul data-role="listview">
+					<li data-role="list-divider">Links:</li>
+					<li><a href="#author">Author Info</a></li>
+					<li><a href="#">Git Hub Pages Branch</a></li>
+					<li><a href="https://github.com/g05677/MIU-1305">Git Hub Repository</a></li>
+					<li><a href="../Gold/index.html" data-ajax="false">Bronze Application</a></li>
+				</ul>
+			</div>
+			<div id="featuredInfoPage">
+				<a href='additem.html' data-ajax="false"><img src='img/Featured.png'></a>
+			</div><!-- /featured -->
 			<div data-role="footer" data-position="fixed" data-id="home">
 				<div data-role="navbar">
 					<ul>
@@ -174,7 +223,41 @@
 					</ul>
 				</div><!-- /navbar -->
 			</div><!-- /footer -->
-		</div>
+		</div><!-- /info -->
+		
+		<!-- Author Page -->
+		<div data-role="page" id="author" style="background:transparent;" data-add-back-btn="true">
+			<div data-role="header" data-position="fixed" data-id="header" data-add-back-btn="true">
+				<h1>Bronze Author</h1>
+			</div><!-- /header -->
+			<div data-role="content" id="authorData">
+				<ul data-role="listview" data-inset="true" data-theme="a">
+				    <li data-role="list-divider">About the Author:</li>
+				    <li>
+				    	<img src="img/author.png">
+				        <h2>David L. Jones</h2>
+				        <p><strong>Student|Full Sail University</strong></p>
+				        <p><strong>Mobile Development BS</strong></p>
+				        <p>dljones79@fullsail.edu</p>
+				        <p>Loves to code!</p>
+				    </li>
+				</ul>
+			</div><!-- /authorData -->
+
+			<div id="featuredAuthorPage">
+				<a href='additem.html' data-ajax="false"><img src='img/Featured.png'></a>
+			</div><!-- /featured -->
+			<div data-role="footer" data-position="fixed" data-id="home">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home" data-ajax="false">Home</a></li>
+						<li><a href="#activity" data-icon="grid" data-ajax="false">Activity</a></li>
+						<li><a href="#info" data-icon="info" data-ajax="false" class="ui-btn-active ui-state-persist">Info</a></li>
+						<li><a href="additem.html" data-icon="plus" data-ajax="false">Add Item</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+		</div><!-- /author -->		
 		
 <!-- Beginning work on #additem page
 		
