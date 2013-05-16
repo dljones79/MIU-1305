@@ -2,7 +2,8 @@
 
 <!--David Jones-->
 <!--MIU 1305-->
-<!--Project 1-->
+<!--Project 2-->
+<!--Bronze Application-->
 
 <html lang="en">
 	<head>
@@ -29,7 +30,7 @@
 		<!-- Body content -->
 		<div data-role="page" id="home" style="background:transparent;">
 			<div data-role="header" data-position="fixed" data-id="header">
-				<h1 id="homeHead">Bronze Database</h1>
+				<h1 id="homeHead">Character Database</h1>
 			</div><!-- /header -->
 			<!--Featured Item Div-->
 			<div id="featured">
@@ -44,27 +45,53 @@
 							<input type="search" name="searchChar" id="searchChar" placeholder="Search Here."/>
 						</div><!-- /searchContainer -->
 					</form><!-- /searchCharacters -->
-				</div>
+				</div><!-- /formContainer -->
 				<div id="controlGroup">
-					<ul data-role="listview" id="browseContainer">
+					<ul data-role="listview"id="browseContainer">
 						<li data-role="list-divider" id="divider">Browse By:</li>
-						<li><a href="#browse" data-icon="arrow-r" data-iconpos="right" id="scoutLink">
-							<h3>Scouts</h3>
-						</a></li>
-						<li><a href="#browse" data-icon="arrow-r" data-iconpos="right" id="fighterLink">
-							<h3>Fighters</h3>
-						</a></li>
-						<li><a href="#browse" data-icon="arrow-r" data-iconpos="right" id="priestLink">
-							<h3>Priests</h3>
-						</a></li>
-						<li><a href="#browse" data-icon="arrow-r" data-iconpos="right" id="mageLink">
-							<h3>Mages</h3>
-						</a></li>
-						<li><a href="#browse" data-icon="arrow-r" data-iconpos="right" id="maxLink">
-							<h3>Max Level</h3>
-						</a></li>
+						<div class="ui-grid-a" id="browseButtonDiv">
+							<!-- 1st Row -->
+							<div class="ui-block-a">
+								<div class="ui-bar ui-bar-a">
+									<a href="#browse"><img src="img/buttons/scouts.png" /></a>
+									<div class="imgCaption">Scouts</div>
+								</div>
+							</div>
+							<div class="ui-block-b">
+								<div class="ui-bar ui-bar-a">
+									<a href="#browse"><img src="img/buttons/fighters.png" /></a>
+									<div class="imgCaption">Fighters</div>
+								</div>
+							</div>
+							<!-- 2nd Row -->
+							<div class="ui-block-a">
+								<div class="ui-bar ui-bar-a">
+									<a href="#browse"><img src="img/buttons/healers.png" /></a>
+									<div class="imgCaption">Priests</div>
+								</div>
+							</div>
+							<div class="ui-block-b">
+								<div class="ui-bar ui-bar-a">
+									<a href="#browse"><img src="img/buttons/mages.png" /></a>
+									<div class="imgCaption">Mages</div>
+								</div>
+							</div>
+							<!-- 3rd Row -->
+							<div class="ui-block-a">
+								<div class="ui-bar ui-bar-a">
+									<a href="#browse"><img src="img/buttons/arrow-up.png" /></a>
+									<div class="imgCaption">Level</div>
+								</div>
+							</div>
+							<div class="ui-block-b">
+								<div class="ui-bar ui-bar-a">
+									<a href="#browse"><img src="img/buttons/server.png" /></a>
+									<div class="imgCaption">Server</div>
+								</div>
+							</div>
+						</div><!-- /browseButtonDiv -->
 					</ul><!-- /browseContainer -->
-				</div><!-- /controlGroup -->				
+				</div><!-- /controlGroup -->
 			</div><!-- /homeContent -->
 			<div data-role="footer" data-position="fixed" data-id="home">
 				<div data-role="navbar">
@@ -80,10 +107,10 @@
 		
 		<div data-role="page" id="activity" style="background:transparent;" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" data-id="header">
-				<h1 id="activityHead">Bronze Activity</h1>
+				<h1 id="activityHead">Activity</h1>
 			</div><!-- /header -->
 			<div data-role="content" id="activityFeed">
-				<ul data-role="listview" data-inset="true" data-theme="a" data-filter="true">
+				<ul data-role="listview" data-inset="true" data-theme="a" data-filter="true" id="activityList">
 				    <li data-role="list-divider">Wednesday, June 15, 2013 <span class="ui-li-count">3</span></li>
 				    <li>
 				    	<img src="img/newsfeed/Swashbuckler.png">
@@ -121,7 +148,7 @@
 				        <p>Added Character to Database</p>
 				        <p class="ui-li-aside"><strong>1:40</strong>PM</p>
 				    </li>
-				</ul>
+				</ul><!-- /activityList -->
 			</div><!-- /activityFeed -->
 			<div data-role="footer" data-position="fixed" data-id="home">
 				<div data-role="navbar">
@@ -139,7 +166,7 @@
 		<!-- Intend to use JS to expand each section according to which browse button was pushed. -->
 		<div data-role="page" id="browse" style="background:transparent;" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" data-id="header">
-				<h1>Bronze Browse</h1>
+				<h1>Browse</h1>
 			</div><!-- /header -->
 			<div data-role="content" id="browseResults">
 				<div data-role="collapsible" data-collapsed="false" data-theme="b" data-content-theme="a">
@@ -203,15 +230,15 @@
 		<!-- Info Page -->
 		<div data-role="page" id="info" style="background:transparent;" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" data-id="header">
-				<h1>Bronze Info</h1>
+				<h1>Info</h1>
 			</div><!-- /header -->
 			<div data-role="content" id="infoContent" data-theme="a">
 				<ul data-role="listview">
 					<li data-role="list-divider">Links:</li>
 					<li><a href="#author">Author Info</a></li>
-					<li><a href="#">Git Hub Pages Branch</a></li>
+					<li><a href="http://g05677.github.io/MIU-1305/Bronze/index.html">Live Bronze GH Page</a></li>
 					<li><a href="https://github.com/g05677/MIU-1305">Git Hub Repository</a></li>
-					<li><a href="../Gold/index.html" data-ajax="false">Bronze Application</a></li>
+					<li><a href="../Gold/index.html" data-ajax="false">Gold Application</a></li>
 				</ul>
 			</div>
 			<div id="featuredInfoPage">
@@ -232,7 +259,7 @@
 		<!-- Author Page -->
 		<div data-role="page" id="author" style="background:transparent;" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" data-id="header" data-add-back-btn="true">
-				<h1>Bronze Author</h1>
+				<h1>Author</h1>
 			</div><!-- /header -->
 			<div data-role="content" id="authorData">
 				<ul data-role="listview" data-inset="true" data-theme="a">
@@ -381,7 +408,7 @@
 	
 		<!-- Linking to our JS files
 		<script src="js/json.js" type="text/javascript"></script>
-		<script src="js/main.js" type="text/javascript"></script>  -->
+		<script src="js/main.js" type="text/javascript"></script> -->
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 	</body><!-- /body -->
