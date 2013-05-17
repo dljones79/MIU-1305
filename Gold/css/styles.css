@@ -22,8 +22,10 @@ body {background-color: black !important;}
 
 #homeHead {font-size: 13px !important;}
 
-#divider {margin-top: 0px !important; margin-bottom: 0px !important;}
+#divider {margin-top: -13px !important; margin-bottom: 0px !important;}
 
 #browseContainer {padding-top: 0px !important; padding-bottom: 0px !important; margin-top: 0px !important; margin-bottom: 10px !important;}
 
 #formContainer {padding-bottom: 0px !important; margin-bottom: 0px !important;}
+
+#controlGroup {margin-top:18px;}
