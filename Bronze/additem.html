@@ -2,7 +2,7 @@
 
 <!--David Jones-->
 <!--MIU 1303-->
-<!--Project 1-->
+<!--Week 3-->
 
 <!-- Start of HTML -->
 <html>
@@ -37,8 +37,8 @@
 					<span>* Fields are required</span>
 					<ul id="formErrors"></ul>
 					<ul>
-						<li><label for="cName">*Character Name:</label><input type="text" id="cName" /></li>
-						<li><label for="account">*Account:</label><input type="text" id="account"/></li>
+						<li><label for="cName">*Character Name:</label><input type="text" id="cName" placeholder="Name"/><p>First name only.</p></li>
+						<li><label for="account">*Account:</label><input type="text" id="account" placeholder="Account"/></li>
 						<li>
 							<!-- Option group to select server -->
 							<label for="server">Server:</label>
@@ -77,9 +77,11 @@
 									<option label="Test Copy">Test Copy</option>
 								</optgroup>
 							</select>
+							<p>Character located on what server?</p>
 						</li>
-						<li><label for="guild">Guild:</label><input type="text" id="guild"/></li>
+						<li><label for="guild">Guild:</label><input type="text" id="guild" placeholder="Guild"/></li>
 						<li><label for="creation">Creation Date:</label><input type="date" id="creation"/></li>
+						<li><label for="today">Today's Date:</label><input type="date" id="today"/></li>
 						<li id="selClass"><label for="class">*Class:</label><br /></li>
 					</ul>
 				</fieldset>
@@ -90,7 +92,7 @@
 					<legend>Character Data</legend>
 					<ul>
 						<!-- Radio buttons to choose character sex. -->
-						<li>Sex:
+						<li>Gender:
 							<ul>
 								<li><input type="radio" checked value="Male" id="male" name="sex" /><label for="male">Male</label></li>
 								<li><input type="radio" value="Female" id="female" name="sex" /><label for="female">Female</label></li>
@@ -109,9 +111,10 @@
 								<li><input type="checkbox" value="Yes" id="harrows" /><label for="harrows">Harrows Access</label></li>
 								<li><input type="checkbox" value="Yes" id="skyshrine" /><label for="skyshrine">Skyshrine Access</label></li>
 							</ul>
+							<p>What signature questlines have been completed?</p>
 						</li>
 						<!-- Text area to input character biography. -->
-						<li><label for="bio">Bio:</label><textarea id="bio"></textarea></li>
+						<li><label for="bio">Bio:</label><textarea id="bio" placeholder="Character Info"></textarea><p>Enter any extra info here.</p></li>
 					</ul>
 				</fieldset>
 			</div>

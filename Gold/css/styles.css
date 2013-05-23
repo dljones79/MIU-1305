@@ -1,4 +1,13 @@
 /*
+
+title: styles.css
+by: David Jones
+for: MIU 1305 - Week 3
+
+*/
+
+
+/*
 body {
 	background: url('../img/bg.png') !important;
 }
@@ -29,3 +38,10 @@ body {background-color: black !important;}
 #formContainer {padding-bottom: 0px !important; margin-bottom: 0px !important;}
 
 #controlGroup {margin-top:18px;}
+
+#errorsLink {display:none;}
+
+label.error{display:block; margin:10px 0; color:#cc0000;}
+
+div p {font-size:14px; color:gray; margin-top:1px; margin-left:5px;}
+
