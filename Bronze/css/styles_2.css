@@ -1,8 +1,8 @@
 /*
 
-title: styles.css
+title: styles_2.css
 by: David Jones
-for: MIU 1305 - Project 1
+for: MIU 1305 - Week 3
 
 */
 
@@ -184,3 +184,5 @@ input[type=button]{
 	font-weight: none;
 	font-size:0px;
 }
+
+li p {font-size:13px; font-weight:100; margin-top:1px; margin-bottom:1px; padding:1px;}

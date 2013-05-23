@@ -1,6 +1,6 @@
 // David Jones
 // MIU 1305
-// Project 1
+// Week 3
 
 //Don't initialize until the DOM is done loading.
 window.addEventListener("DOMContentLoaded", function(){
@@ -100,6 +100,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			obj.server 	    = ["Server:", get('server').value];
 			obj.guild 		= ["Guild:", get('guild').value];
 			obj.creation	= ["Creation Date:", get('creation').value];
+			obj.today		= ["Today's Date:", get('today').value];
 			obj.charClass	= ["Class:", get('classes').value];
 			obj.sex 		= ["Sex:", sexData]; 
 			obj.level 		= ["Level:", get('level').value];
@@ -229,6 +230,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		get('server').value = charObj.server[1];
 		get('guild').value = charObj.guild[1];
 		get('creation').value = charObj.creation[1];
+		get('today').value = charObj.today[1];
 		get('classes').value = charObj.charClass[1];
 		var sexRadios = document.forms[0].sex;
 		for(var i=0; i<sexRadios.length; i++){
