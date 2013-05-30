@@ -19,7 +19,8 @@
 		<meta name = "viewport" content = "user-scalable=no, width=device-width"/>
 		<meta http-equiv="cleartype" content="on">
 
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
+		<link rel="stylesheet" href="themes/Epic.min.css" />
 		<link rel="stylesheet" href="css/styles.css" />		
 		
 		<script type="text/javascript" src="js/libs/modernizr.custom.min.js"></script>
@@ -31,6 +32,7 @@
 		<div data-role="page" id="home" style="background:transparent;">
 			<div data-role="header" data-position="fixed" data-id="header">
 				<h1 id="homeHead">Character Database</h1>
+				<img src="img/eq2brand.png" class="ui-btn-left" />
 			</div><!-- /header -->
 			<!--Featured Item Div-->
 			<div id="featured">
@@ -81,6 +83,7 @@
 		<div data-role="page" id="activity" style="background:transparent;" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" data-id="header">
 				<h1 id="activityHead">Activity</h1>
+				<img src="img/eq2brand.png" class="ui-btn-left" />
 			</div><!-- /header -->
 			<div data-role="content" id="activityFeed">
 				<ul data-role="listview" data-inset="true" data-theme="a" data-filter="true">
@@ -140,6 +143,7 @@
 		<div data-role="page" id="browse" style="background:transparent;" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" data-id="header">
 				<h1>Browse</h1>
+				<img src="img/eq2brand.png" class="ui-btn-right" />
 			</div><!-- /header -->
 			<div data-role="content" id="browseResults">
 				<div data-role="collapsible" data-collapsed="false" data-theme="b" data-content-theme="a">
@@ -204,6 +208,7 @@
 		<div data-role="page" id="info" style="background:transparent;" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" data-id="header">
 				<h1>Info</h1>
+				<img src="img/eq2brand.png" class="ui-btn-left" />
 			</div><!-- /header -->
 			<div data-role="content" id="infoContent" data-theme="a">
 				<ul data-role="listview">
@@ -215,7 +220,7 @@
 				</ul>
 			</div>
 			<div id="featuredInfoPage">
-				<a href='additem.html' data-ajax="false"><img src='img/Featured.png'></a>
+				<a href='#addItem' data-ajax="false"><img src='img/Featured.png'></a>
 			</div><!-- /featured -->
 			<div data-role="footer" data-position="fixed" data-id="footer">
 				<div data-role="navbar">
@@ -233,6 +238,7 @@
 		<div data-role="page" id="author" style="background:transparent;" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed" data-id="header" data-add-back-btn="true">
 				<h1>Author</h1>
+				<img src="img/eq2brand.png" class="ui-btn-right" />
 			</div><!-- /header -->
 			<div data-role="content" id="authorData">
 				<ul data-role="listview" data-inset="true" data-theme="a">
@@ -240,7 +246,7 @@
 				    <li>
 				    	<img src="img/author.png">
 				        <h2>David L. Jones</h2>
-				        <p><strong>Student|Full Sail University</strong></p>
+				        <p><strong>Student | Full Sail University</strong></p>
 				        <p><strong>Mobile Development BS</strong></p>
 				        <p>dljones79@fullsail.edu</p>
 				        <p>Loves to code!</p>
@@ -249,7 +255,7 @@
 			</div><!-- /authorData -->
 
 			<div id="featuredAuthorPage">
-				<a href='additem.html' data-ajax="false"><img src='img/Featured.png'></a>
+				<a href='#addItem' data-ajax="false"><img src='img/Featured.png'></a>
 			</div><!-- /featured -->
 			<div data-role="footer" data-position="fixed" data-id="footer">
 				<div data-role="navbar">
@@ -263,18 +269,19 @@
 			</div><!-- /footer -->
 		</div><!-- /author -->	
 		
-		<div data-role="page" id="addItem">
+		<div data-role="page" id="addItem" style="background:transparent;">
 			<div data-role="header" data-position="fixed">
 				<a href="#home" data-icon="back" data-theme="a">Back</a>
 				<h1>Add Item</h1>
+				<img src="img/eq2brand.png" class="ui-btn-right" />
 			</div>
 			<div data-role="content" data-theme="a">
 				<div data-role="fieldcontain" id="addItemControls">
 					<div class="ui-grid-b">
 						<!-- Buttons to clear data, display data, and add new data. -->
-						<div class="ui-block-a"><a href="" data-role="button" data-mini="true" id="clearData">Clear Data</a></div>
+						<div class="ui-block-a"><a href="" data-role="button" data-mini="true" id="clearData">Clear</a></div>
 						<div class="ui-block-b"><a href="#characterList" data-role="button" data-mini="true" id="dispData">Display</a></div>
-						<div class="ui-block-c"><a href="" data-role="button" data-mini="true" id=" newChar" onclick="window.location.href='#addItem'" style="display:none;">New Character</a></div>
+						<div class="ui-block-c"><a href="" data-role="button" data-mini="true" id=" newChar" onclick="window.location.href='#addItem'" style="display:none;">New</a></div>
 					</div>
 				</div>
 				<form action="" id="characterDataForm">
@@ -414,7 +421,7 @@
 					</div>
 					<div data-role="fieldcontain">
 						<div class="ui-grid-a">
-							<div class="ui-block-a"><input type="submit" value="Add Character" data-theme="b"/></div>
+							<div class="ui-block-a"><input type="submit" value="Submit" data-theme="b"/></div>
 							<div class="ui-block-b"><input type="reset" value="Reset" data-theme="a"/></div>
 						</div>
 					</div>
@@ -436,6 +443,7 @@
 		<div data-role="dialog" id="recordErrors">
 			<div data-role="header" data-position="fixed">
 				<h1>Missing Fields</h1>
+				<img src="img/eq2brand.png" class="ui-btn-left" />
 			</div>			
 			<div data-role="content">
 				<ul>
@@ -447,6 +455,7 @@
 		<div data-role="page" id="characterList" data-add-back-btn="true">
 			<div data-role="header" data-position="fixed">
 				<h1>Saved Characters</h1>
+				<img src="img/eq2brand.png" class="ui-btn-left" />
 			</div>
 			<div data-role="content">
 				

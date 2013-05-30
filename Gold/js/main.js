@@ -40,16 +40,6 @@ $('#addItem').on('pageinit', function(){
 
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
 
-// Functions to find values of radio buttons.
-function selRadio(){
-	var rad = document.forms[1].sex;
-	for (var i = 0; i<rad.length; i++){
-		if(rad[i].checked){
-		sexData = rad[i].value;
-		}
-	}
-};
-
 //Function to find checkbox data.
 function chkBoxData(){
 	if(get('enervated').checked){
@@ -138,7 +128,6 @@ var storeData = function(data){
 //	var uniqueId        = Math.floor(Math.random()*100000001);
 	// Get data from form and store in an object.
 	// Object properties contain array with form label and input values.
-	selRadio();
 	chkBoxData();
 	var obj 			= {};
 		obj.cName 		= ["Name:", get('cName').value];
@@ -148,7 +137,7 @@ var storeData = function(data){
 		obj.today		= ["Today\'s Date:", get('today').value];
 		obj.creation	= ["Creation Date:", get('creation').value];
 		obj.charClass	= ["Class:", get('class').value];
-		obj.sex 		= ["Sex:", sexData]; 
+		obj.sex 		= ["Gender:", $("input:radio[name=sex]:checked").val()]; 
 		obj.level 		= ["Level:", get('level').value];
 		obj.aa 		    = ["AA\'s:", get('aa').value];
 		obj.enervated   = ["Enervated:", enervated];
