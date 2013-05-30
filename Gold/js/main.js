@@ -1,6 +1,6 @@
 //David Jones
 //MiU 1305
-//Week 3 
+//Week 4 
 
 
 $('#home').on('pageinit', function(){

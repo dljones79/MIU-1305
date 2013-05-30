@@ -1,6 +1,6 @@
 // David Jones
 // MIU 1305
-// Week 3
+// Week 4
 
 var jsonObj = {
 	"character1": {
